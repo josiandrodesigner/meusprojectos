@@ -560,6 +560,10 @@ footer div#algunsclientes:hover div {
         transform: none;
     }
     
+    #quarta_sessao{
+        display: none;
+    }
+
 
 
 
@@ -590,6 +594,7 @@ footer div#algunsclientes:hover div {
         width: 100%;
         left: 0px;
         top: 810px;
+        display: none;
     }
     
     #segunda_sessao {
