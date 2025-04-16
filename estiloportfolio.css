@@ -1,0 +1,762 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    background-image: url(fundo4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    width: 100%;
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(51, 3, 97);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 285px;
+    right:   820px;
+    padding: 30px;
+    backdrop-filter: blur(90px);
+    width: 110vh;
+    height: 50px;
+    rotate: 90deg;
+}
+header a:hover {
+    background: linear-gradient(190deg, rgb(187, 0, 255), rgb(255, 0, 217));
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animacao-degrade 1s linear infinite;
+
+}
+
+header img {
+    rotate: -90deg;
+}
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul li {
+    margin-left: 15px;
+}
+
+#fotoperf {
+    animation: rotacao 1s linear infinite;
+}
+
+h3, h1 {
+
+    background: linear-gradient(190deg, rgb(187, 0, 255), rgb(255, 0, 217));
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animacao-degrade 1s linear infinite;
+}
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+li {
+    list-style: none;
+    padding: 2px;
+    margin-left: 10px;
+}
+
+
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    background: linear-gradient(100deg, rgb(92, 0, 126), rgb(255, 0, 221));
+    background-size: 300%;
+    animation: animacao-degrade 2s linear infinite;
+    border-radius: 10px;
+}
+
+section {
+    width: 100%;
+}
+
+.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    transform: translatey(0);
+    transition: 2s;
+}
+
+#descricao {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 20px;
+}
+
+#barra_menu {
+    position: absolute;
+    margin-left: 50px;
+
+}
+
+#primeira_sessao {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 633px;
+
+
+}
+
+#primeira_sessao #barra_menu img {
+    width: 70px
+}
+
+#primeira_sessao img#foto_sis0 {
+    width: 520px;
+    animation: mov 5s linear infinite;
+    transition: 5s all;
+}
+
+#primeira_sessao #descricao.show {
+    animation: aumenta 1.10s linear 1;
+}
+
+#segunda_sessao #form {
+    position: absolute;
+    height: 370px;
+    background: linear-gradient(90deg, rgb(43, 0, 96), transparent);
+    width: 100%;
+    right: 100px;
+    top: 635px;
+
+}
+
+#segunda_sessao {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 633px;
+
+}
+
+#segunda_sessao #foto_sis1 {
+    width: 725px;
+}
+
+#segunda_sessao #descricao {
+    padding-right: 100px;
+    margin-bottom: 120px;
+}
+
+#terceira_sessao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 633px;
+
+}
+#terceira_sessao h2 {
+
+    padding-left: 190px;
+    padding-right: 190px;
+    text-align: center;
+
+}
+#tabela_servicos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#tabela_servicos p {
+    font-size: 12px;
+
+}
+
+#servico.show {
+    animation: abertura_box 1s linear 1;
+}
+
+#servico {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 220px;
+    height: 450px;
+    padding: 10px;
+    background-color: rgba(255, 0, 123, 0.2);
+    border: 1.6px solid rgba(255, 5, 238, 0.388);
+    border-radius: 10px;
+}
+
+
+div #linha {
+    background: linear-gradient(190deg, rgb(0, 238, 255, 0), rgb(255, 0, 217));
+    height: 2px;
+    width: 150px;
+    opacity: 80%;
+    border-radius: 20px;
+}
+
+#servico:nth-child(1) {
+
+    transition-delay: 1s;
+}
+#servico:nth-child(2) {
+
+    transition-delay: 1s;
+}
+
+#servico:nth-child(3) {
+
+    transition-delay: 1s;
+}
+
+#servico:nth-child(4) {
+
+    transition-delay: 1s;
+}
+
+#quarta_sessao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 633px;
+
+}
+
+#quarta_sessao div#trabalhos {
+    display: flex;
+    flex-direction: column;
+}
+
+#quarta_sessao #container1 {
+    margin-left: 7%;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    animation: carrocel1 5s linear infinite;
+}
+
+#quarta_sessao #container2 {
+    margin-left: -7%;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    animation: carrocel2 5s linear infinite;
+}
+
+#trabalhos img:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+    box-shadow: 10px 10px 50px rgb(0, 0, 0)
+}
+
+#quarta_sessao img {
+    width: 200px;
+    padding: 7px 0px 7px 0px;
+    background: linear-gradient(90deg, rgb(125, 0, 183), rgb(255, 0, 221));
+    background-size: 200%;
+    border-radius: 5px;
+    margin: 3.5px;
+    animation: animacao-degrade 1s linear infinite;
+    transition: 1s;
+}
+
+#quinta_sessao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 633px;
+
+}
+
+#quinta_sessao #Feedbacks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#quinta_sessao #Feedbacks img {
+    width: 260px;
+    transition: all 1s;
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+#quinta_sessao #Feedbacks:hover img {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+img.feedb1 {
+    transform: perspective(500px) rotateY(20deg);
+}
+
+#Feedbacks img.feedb1:hover {
+    transform: scale(1.10) translateX(-90px);
+    transition: 2s;
+}
+
+img.feedb2 {
+    transform: perspective(500px) rotateY(-20deg);
+
+}
+
+#Feedbacks img.feedb2:hover {
+    transform: scale(1.10) translateX(90px);
+    transition: 2s;
+}
+
+img.feedb3 {
+    position: absolute;
+    transform: perspective(500px);
+    filter: drop-shadow(1px 1px 20px black);
+
+}
+
+#Feedbacks img.feedb3:hover {
+    transform: scale(1.10);
+
+}
+
+#abafeedb.show {
+    animation: aumenta_c 1s linear 1;
+}
+footer.show{
+    animation: abertura_box 1s linear 1;
+
+
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    height: 300px;
+    width: 100%;
+    gap: 50px;
+    background-color: rgb(30, 27, 27);
+
+}
+#navfooter{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+
+}
+footer div#linhadeatendimento a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+
+}
+footer div#linhadeatendimento img {
+    width: 20px;
+
+}
+footer div#redessociais img {
+    width: 30px;
+    height: 30px;
+}
+footer div#algunsclientes img {
+    width: 100px;
+    opacity: 0.2;
+    transition: all 1s;
+}
+footer div#algunsclientes img:hover {
+    opacity: 2;
+    transform: scale(1.2);
+}
+footer div#algunsclientes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+}
+footer div#linhadeatendimento {
+    text-align: end;
+    
+}
+footer div#algunsclientes div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aliceblue;
+    padding: 10px;
+    width: 400px;
+    transform: rotateX(93deg);
+    transition: all 1s;
+}
+footer div#algunsclientes:hover div {
+
+    transform: rotateX(0deg);
+}
+
+
+
+@keyframes animacao-degrade {
+    
+
+    50% {
+        
+        background-position: 100%;
+
+    }
+
+}
+
+@keyframes mov {
+
+    50% {
+        transform: translateY(-10px) translateX(-10px) rotate(-5deg);
+        transition: 2s;
+    }
+}
+
+@keyframes abertura_box {
+
+    0% {
+        transform: rotateX(90deg);
+        transition: 2s;
+
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        transition: 2s;
+    }
+}
+
+@keyframes aumenta {
+
+    0% {
+        transform: translateX(900px) scale(0.1);
+        opacity: 0%;
+        transition: 3s;
+    }
+
+    50% {
+        transform: translateX(0px) scale(1);
+        transition: 3s;
+    }
+
+}
+
+@keyframes aumenta_c {
+
+    0% {
+        transform: scale(0.1);
+        opacity: 1%;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotacao {
+
+    50% {
+        transform: rotateX(50deg) rotateY(20deg) rotate(0deg);
+        transition: 5s;
+    }
+
+}
+
+@keyframes carrocel1 {
+
+    0% {
+
+        transform: translateX(0%) perspective(-600px) rotateY(10deg);
+        transition: all 30s;
+    }
+
+    50% {
+        transform: translateX(-10%) perspective(500px) rotateY(20deg);
+        transition: all 30s;
+    }
+}
+
+@keyframes carrocel2 {
+
+    0% {
+        transform: translateX(0%) perspective(-500px) rotateY(-20deg);
+        transition: all 30s;
+    }
+
+    50% {
+        transform: translateX(5%) perspective(500px) rotateY(-20deg);
+        transition: all 30s;
+    }
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+@media screen and (max-width: 768px)  {
+
+    button{
+        width: 100%;
+    }
+
+
+
+    header {
+        display: none;
+    }
+    .hidden{
+
+        animation: none;
+        transform: none;
+    }
+    
+
+
+
+    
+    #primeira_sessao #descricao {
+        width: 500px;
+        animation: aumenta 1.10s linear 1;
+    }
+    
+    #barra_menu {
+        display: none;
+    }
+    
+    #primeira_sessao {
+        display: flex;
+        width: 100vw;
+        height: 60vh;
+        padding: 20px;
+    }
+    
+    #primeira_sessao img#foto_sis0 {
+        width: 300px;
+    }
+
+    
+    #segunda_sessao #form {
+        background: linear-gradient(180deg, rgb(43, 0, 96), transparent);
+        width: 100%;
+        left: 0px;
+        top: 810px;
+    }
+    
+    #segunda_sessao {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        height: 100vh;
+        width: 100vw;
+        margin-left: -60px;
+
+
+    }
+    #segunda_sessao #descricao {
+        margin-bottom: 0px;
+        width: 250px;
+        text-align: end;
+
+    }
+    #segunda_sessao #descricao h1, h2 {
+        font-size: 20px;
+
+
+    }
+    #segunda_sessao #descricao p {
+        display: none;
+
+    }
+
+    #segunda_sessao #foto_sis1 {
+        width: 500px;
+        
+    }
+    
+
+    
+    #descricao h1,h2,h3 {
+        font-size: 15px;
+    } 
+
+    #terceira_sessao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #terceira_sessao h2 {
+        font-size: 15px;
+        text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #tabela_servicos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 100vh;
+    }
+
+    #tabela_servicos p {
+        font-size: 8.5px;
+    }
+
+    #tabela_servicos h1,h1,h3 {
+        font-size: 10px;
+    
+    }
+    
+    #servico.show {
+        animation: none;
+
+    }
+    
+    #servico {
+        height: 268px;
+    }
+
+    #quarta_sessao {
+        text-align: center;
+        height: 100vh;
+        width: 100vw;
+        padding: 20px;
+    }
+
+    section{
+        width: 100vw;  
+    }
+
+    #quarta_sessao img {
+        width: 100px;
+    }
+    
+    #quinta_sessao {
+        padding: 50px;
+    }
+    
+
+    footer.hidden{
+        opacity: 1;
+        animation: none;
+        transform: none;
+        height: 250px;
+    }
+    footer #navfooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100vw;
+
+    }
+
+    footer #navfooter #algunsclientes  {
+        display: none;
+    }
+
+    footer #navfooter #linhadeatendimento   {
+        text-align: center;
+    }
+    footer #navfooter #linhadeatendimento a  {
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (min-width: 1281px)  {
+
+    header {
+        right: 899px;
+    }
+    #primeira_sessao img#foto_sis0 {
+        width: 600px;
+    }
+    section{
+        width: 100%;
+        height: 100vh;
+    }
+
+    #segunda_sessao img#foto_sis1 {
+        width: 730px;
+    }
+    #descricao {
+       width: 450px
+    }
+    
+    #primeira_sessao h1{
+        font-size: 30px;
+    }
+    #segunda_sessao h1{
+        font-size: 30px;
+    }
+    #terceira_sessao h1{
+        font-size: 30px;
+    }
+    #quarta_sessao h1,h2{
+        font-size: 30px;
+    }
+    h2, h3{
+        font-size: 20px;
+    }
+    p {
+       font-size: 15px;
+    }
+    
+}
+

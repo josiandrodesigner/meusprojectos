@@ -1,0 +1,404 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
+* {
+
+
+}
+
+
+body {
+
+    background-image: url(pic/fundo/fundo4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(51, 3, 97);
+}
+
+header {
+    top: 285px;
+    right: 910px;
+    backdrop-filter: blur(90px);
+    width: 100vh;
+    height: 50px;
+    rotate: 90deg;
+    
+}
+
+header img {
+    rotate: -90deg;
+}
+
+
+#fotoperf {
+    animation: rotacao 1s linear infinite;
+}
+
+h3, h1 {
+    background: linear-gradient(190deg, rgb(204, 0, 255), rgb(255, 0, 217));
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animacao-degrade 1s linear infinite;
+    animation: rolagem 2s linear infinite;
+}
+a {
+    color: rgb(255, 255, 255);
+}
+
+
+
+li {
+    list-style: none;
+}
+
+
+
+button {
+    background: linear-gradient(100deg, rgb(125, 0, 183), rgb(255, 0, 221));
+    background-size: 200%;
+    animation: animacao-degrade 2.5s linear infinite;
+}
+
+section{
+height: 733px;
+}
+
+.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    transform: translatey(0);
+    transition: 2s;
+}
+
+#descricao {
+    width: 400px;
+    gap: 20px;
+ 
+}
+
+#primeira_sessao #barra_menu img {
+    width: 70px
+}
+
+#primeira_sessao img#foto_sis0 {
+    width: 500px;
+    animation: mov 5s linear infinite;
+    transition: 5s all;
+}
+
+#primeira_sessao #descricao.show {
+    animation: aumenta 1.10s linear 1;
+}
+
+#segunda_sessao #form {
+    position: absolute;
+    height: 370px;
+    background: linear-gradient(90deg, rgb(43, 0, 96), transparent);
+    width: 1000px;
+    right: 100px;
+    top: 650px;
+}
+
+#segunda_sessao #foto_sis1 {
+    width: 750px;
+    margin-left: -200px;
+    padding-bottom: 60px ;
+}
+
+
+
+#terceira_sessao {
+    gap: 30px;
+}
+#tabela_servicos {
+    gap: 20px;
+}
+
+#servico.show {
+    animation: abertura_box 1s linear 1;
+}
+
+#servico {
+    gap: 10px;
+    width: 250px;
+    height: 450px;
+    background-color: rgba(255, 0, 123, 0.2);
+    border: 1.6px solid rgba(255, 5, 238, 0.388);
+}
+div #linha {
+    background: linear-gradient(190deg, rgb(0, 238, 255, 0), rgb(255, 0, 217));
+    height: 2px;
+    width: 150px;
+    opacity: 80%;
+    border-radius: 20px;
+}
+
+#servico:nth-child(2) {
+    animation-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+#servico:nth-child(3) {
+    animation-delay: 0.7s;
+    transition-delay: 0.7s;
+}
+
+#servico:nth-child(4) {
+    animation-delay: 1s;
+    transition-delay: 1s;
+}
+
+#quarta_sessao {
+    gap: 20px;
+    height: 633px;
+}
+
+
+
+#quarta_sessao #container1 {
+    margin-left: 7%;
+    animation: carrocel1 5s linear infinite;
+}
+
+#quarta_sessao #container2 {
+    margin-left: -7%;
+    animation: carrocel2 5s linear infinite;
+}
+
+#pictrabalho:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+    box-shadow: 10px 10px 50px rgb(0, 0, 0)
+}
+
+#quarta_sessao img {
+    width: 200px;
+    padding: 7px 0px 7px 0px;
+    background: linear-gradient(90deg, rgb(125, 0, 183), rgb(255, 0, 221));
+    background-size: 200%;
+    border-radius: 5px;
+    margin: 3.5px;
+    animation: animacao-degrade 1s linear infinite;
+    transition: 1s;
+}
+
+#quinta_sessao {
+    gap: 30px;
+}
+
+#quinta_sessao #Feedbacks img {
+    width: 260px;
+    transition: all 1s;
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+#quinta_sessao #Feedbacks:hover img {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+img.feedb1 {
+    transform: perspective(500px) rotateY(20deg);
+}
+
+#Feedbacks img.feedb1:hover {
+    transform: scale(1.10) translateX(-90px);
+    transition: 2s;
+}
+
+img.feedb2 {
+    transform: perspective(500px) rotateY(-20deg);
+}
+
+#Feedbacks img.feedb2:hover {
+    transform: scale(1.10) translateX(90px);
+    transition: 2s;
+}
+
+img.feedb3 {
+    position: absolute;
+    transform: perspective(500px);
+    filter: drop-shadow(1px 1px 20px black);
+}
+
+#Feedbacks img.feedb3:hover {
+    transform: scale(1.10);
+}
+
+#abafeedb.show {
+    animation: aumenta_c 1s linear 1;
+}
+
+footer {
+    height: 300px;
+    background-color: rgb(30, 27, 27);
+}
+
+
+
+
+@keyframes animacao-degrade {
+
+    to {
+        background-position: 100%;
+    }
+}
+
+@keyframes mov {
+
+    50% {
+        transform: translateY(-10px) translateX(-10px) rotate(-5deg);
+        transition: 2s;
+    }
+}
+
+@keyframes abertura_box {
+
+    0% {
+        transform: rotateX(90deg);
+        transition: 2s;
+
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        transition: 2s;
+    }
+}
+
+@keyframes aumenta {
+
+    0% {
+        transform: translateX(900px) scale(0.1);
+        opacity: 0%;
+        transition: 3s;
+    }
+
+    50% {
+        transform: translateX(0px) scale(1);
+        transition: 3s;
+    }
+
+}
+
+@keyframes aumenta_c {
+
+    0% {
+        transform: scale(0.1);
+        opacity: 1%;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotacao {
+
+    50% {
+        transform: rotateX(50deg) rotateY(20deg) rotate(0deg);
+        transition: 5s;
+    }
+
+}
+
+@keyframes carrocel1 {
+
+    0% {
+
+        transform: translateX(0%) perspective(-600px) rotateY(10deg);
+        transition: all 30s;
+    }
+
+    50% {
+        transform: translateX(-10%) perspective(500px) rotateY(20deg);
+        transition: all 30s;
+    }
+}
+
+@keyframes carrocel2 {
+
+    0% {
+        transform: translateX(0%) perspective(-500px) rotateY(-20deg);
+        transition: all 30s;
+    }
+
+    50% {
+        transform: translateX(5%) perspective(500px) rotateY(-20deg);
+        transition: all 30s;
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    body{
+        animation: none;
+        transition: none;
+        display: block;
+    }
+
+    .show{
+        opacity: 1;
+        animation: none;
+    }
+    html{
+        animation: none;
+        transition: none;
+
+    }
+
+    #quinta_sessao #Feedbacks img {
+        width: 170px;
+        animation: none;
+    }
+    section{
+        display: block;
+    }
+    #primeira_sessao{
+        display: flex;
+        flex-direction: column;
+    }
+    #primeira_sessao{
+        display: flex;
+        flex-direction: column;
+    }
+    #primeira_sessao{
+        display: flex;
+        flex-direction: column;
+    }
+    #primeira_sessao #tabela_servicos {
+        display: grid;
+        grid-template-rows: repeat(4,1fr);
+        gap: 7px;
+
+    }
+    #primeira_sessao #tabela_servicos #servicos{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        width: 60%;
+        height: 60vh;
+        padding: 10px;
+
+
+    }
+
+
+
+    }
+    
